@@ -32,6 +32,12 @@ ul li {
   height: 64px;
 }
 
+.container {
+  width: 960px;
+
+
+}
+
 /**************************************************************************
                                    banner
 **************************************************************************/
@@ -78,13 +84,19 @@ ul li {
 **************************************************************************/
 .info {
   display: flex;
+  justify-content: center;
+  background-color: lightyellow;
+}
+.info .container{
+  display: flex;
   margin-top: 32px;
   border: 1px solid green;
+
 }
 
 .main_info {
   width: 60%;
-  margin-left: 24px;
+  /*margin-left: 24px;*/
 }
 
 .main_text h1 {
@@ -114,17 +126,21 @@ ul li {
   width: 100%;
   border: 1px solid red;
 }
+.side_img {
+  width: 35%;
+  margin: 18px;
+}
 
 .side_img img{
-  width: 85%;
+  width: 100%;
   border: 3px solid purple;
-  margin: 18px;
+
 }
 
 
 .side_text {
   border: 1px solid blue;
-  width: 60%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -137,8 +153,14 @@ ul li {
 .learn {
   display: flex;
   flex-direction: column;
-  border: 1px solid blue;
+  border: 4px solid blue;
   background-color: lightpink;
+  justify-content: center;
+  align-items: center;
+}
+
+.learn .container {
+  border: 1px dotted red;
 }
 
 .learn h1 {
@@ -191,6 +213,48 @@ ul li {
 /**************************************************************************
                                    exhibit
 **************************************************************************/
+.exhibit {
+  border: 1px solid red;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.exhibit h1 {
+  text-align: center;
+  margin: 32px 0;
+}
+
+.exhibit .container {
+  display: flex;
+
+}
+
+.main_ex {
+  border: 1px solid blue;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-right: 24px;
+}
+
+
+#video video {
+  width: 100%;
+}
+
+.video_text {
+  width: 90%;
+  margin-top: 24px;
+  margin-bottom: 32px;
+}
+
+.video_text h2 {
+  margin-bottom: 8px;
+}
+
+
 
 
 /**************************************************************************
