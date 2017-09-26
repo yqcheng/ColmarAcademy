@@ -109,6 +109,47 @@ ul li:hover {
   border-image: url(../images/polygon.png) 0 0 27 round stretch;
 }
 
+.cell_logo {
+  display: none;
+}
+
+@media only screen and (max-width: 1024px) {
+  #logo_text {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .logo,
+  nav {
+    display: none;
+  }
+
+  .cell_logo {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin: 0 1rem;
+  }
+
+  .cell_logo img {
+    width: 2.5rem;
+    height: 3rem;
+    -webkit-filter: invert(100%);
+
+  }
+
+  .cell_logo_hover {
+    transition: all 300ms ease;
+  }
+
+  .cell_logo_hover:hover {
+    -webkit-filter: none;
+  }
+
+}
+
+
 
 
 /**************************************************************************
@@ -198,6 +239,33 @@ ul li:hover {
 }
 
 
+@media only screen and (max-width: 500px) {
+
+  .banner_img {
+    height: 20rem;
+
+  }
+
+  .banner_text {
+    margin: 1.4rem 0;
+    width: 84%;
+    height: 20rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .banner_text h1:hover {
+    font-size: 3rem;
+  }
+
+  .banner_text h1 {
+    font-size: 3rem;
+    text-align: center;
+    width: 100%;
+    margin-left:0;
+    line-height: 3rem;
+  }
+}
+
 /**************************************************************************
                                    info
 **************************************************************************/
@@ -229,7 +297,7 @@ ul li:hover {
   font-size: 1.7rem;
   font-weight: bold;
   color: rgb(123, 188, 174);
-  text-shadow: 1.5px 1.5px rgb(120,177,173);
+  /* text-shadow: 1.5px 1.5px rgb(120,177,173); */
   width: 95%;
   margin-left: 0.4rem;
 }
@@ -319,6 +387,59 @@ ul li:hover {
   font-size: 0.85rem;
 }
 
+@media only screen and (max-width: 500px) {
+  .main_info {
+    display: none;
+  }
+
+  .side_info {
+    width: 90%;
+    margin-top: -3.5rem;
+  }
+
+  .side_container {
+    flex-direction: column;
+    border: none;
+    margin-top: 0;
+  }
+
+  .side_img {
+    width: 100%;
+    object-fit: cover;
+    margin-top: 0;
+
+  }
+
+  .side_img img {
+    height:12rem;
+    object-fit: cover;
+  }
+
+  .side_text {
+    width: 90%;
+  }
+
+  .side_text h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.4rem;
+    transition: color 300ms ease-in;
+  }
+
+
+  .side_container:hover .side_text h2 {
+    color: white;
+  }
+
+
+
+  .side_text p:last-chile {
+    display: flex;
+  }
+
+}
+
+
+
 
 /**************************************************************************
                                    courses
@@ -396,6 +517,58 @@ ul li:hover {
 }
 
 
+@media only screen and (max-width: 500px) {
+  .course_container img,
+  .course_text p{
+    display: none;
+  }
+
+  .learn {
+    margin-top: -1.5rem;
+  }
+
+  .learn h1 {
+    margin: 2.5rem 0 2rem 0;;
+  }
+
+  #courses {
+    margin: 0;
+    margin-bottom: 2.3rem;
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .top_three,
+  .bottom_three {
+    margin: 0;
+    width: 100%;
+    flex-direction: column;
+  }
+
+
+  .course_container {
+    margin: 0 0.5rem;
+    width: 95%;
+    margin-top: 0.4rem;
+    transition: all 400ms ease;
+  }
+
+  .course_container:hover {
+    background-color: rgb(123, 188, 174);
+    transform: none;
+    color: white;
+  }
+
+  .course_text {
+    margin: 0.8rem 0 1rem 0.8rem;
+    width: 70%;
+  }
+
+  .course_text h2{
+    font-size: 1.5rem;
+  }
+}
+
 
 /**************************************************************************
                                    exhibit
@@ -444,9 +617,38 @@ ul li:hover {
   font-size: 1.7rem;
   font-weight: bold;
   color: rgb(123, 188, 174);
-  text-shadow: 1.5px 1.5px rgb(120,177,173);
+  /*
+  text-shadow: 1.5px 1.5px rgb(120,177,173);*/
 }
 
+@media only screen and (max-width: 500px) {
+  .container {
+    width: 100%;
+  }
+
+  .exhibit h1 {
+    margin: 2.5rem 0 2rem 0;
+  }
+  .side_ex {
+    display: none;
+    height: 10rem;
+  }
+
+  #video video {
+    width: 100%;
+    margin: 0;
+    margin-bottom: 0;
+  }
+
+  .main_ex {
+    margin: 0;
+    align-items: center;
+  }
+
+  .video_text {
+    display: none;
+  }
+}
 
 /**************************************************************************
                                     footer
@@ -481,7 +683,15 @@ footer {
   color:rgb(44, 57, 59)
 }
 
+@media only screen and (max-width: 500px) {
+  .term {
+    display: none;
+  }
 
+  footer {
+    margin-top:-2rem;
+  }
+}
 
 
 
