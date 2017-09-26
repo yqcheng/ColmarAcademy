@@ -120,6 +120,8 @@ ul li:hover {
 }
 
 @media only screen and (max-width: 768px) {
+
+  }
   .logo,
   nav {
     display: none;
@@ -241,6 +243,9 @@ ul li:hover {
 
 @media only screen and (max-width: 500px) {
 
+  .banner {
+
+  }
   .banner_img {
     height: 20rem;
 
@@ -248,21 +253,22 @@ ul li:hover {
 
   .banner_text {
     margin: 1.4rem 0;
-    width: 84%;
+    width: 80%;
     height: 20rem;
     margin-bottom: 1.5rem;
+
   }
 
   .banner_text h1:hover {
-    font-size: 3rem;
+    font-size: 2.4rem;
   }
 
   .banner_text h1 {
-    font-size: 3rem;
+    font-size: 2.4rem;
     text-align: center;
     width: 100%;
     margin-left:0;
-    line-height: 3rem;
+    line-height: 2.3rem;
   }
 }
 
