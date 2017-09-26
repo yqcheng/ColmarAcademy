@@ -23,6 +23,8 @@ html,
 body {
   font-family: 'open_sansregular', sans-serif;
   font-size: 18px;
+  color: rgb(44, 57, 59);
+  line-height: 1.5rem;
 }
 
 .container {
@@ -44,6 +46,7 @@ body {
   width: 2.5rem;
   color: white;
   -webkit-filter: invert(100%);
+
 }
 
 
@@ -74,6 +77,7 @@ ul li {
   margin-left: 2em;
   font-weight: lighter;
   font-size: 1.1rem;
+  transition: all 300ms ease;
 }
 
 ul li:hover {
@@ -88,8 +92,9 @@ ul li:hover {
   /*background-color: rgba(59, 102, 114, 1);*/
   align-items: center;
   height: 64px;
+  /*
   position: fixed;
-  z-index: 10;
+  z-index: 10; */
   width: 100%;
   top: 0;
   left: 0;
@@ -123,7 +128,6 @@ ul li:hover {
 
 .main{
   position: relative;
-  top: 3rem;
 }
 .banner {
   display: flex;
@@ -145,7 +149,7 @@ ul li:hover {
 
 .banner_text {
   width: 20rem;
-  margin-top: -28rem;
+  margin-top: -28.5rem;
   background-color: rgba(255, 255, 255, 0.5);
   display: flex;
   flex-direction: column;
@@ -161,9 +165,15 @@ ul li:hover {
   font-family: 'Lily Script One', cursive;
   font-size: 4rem;
   text-align: center;
-  line-height:4.3rem;
+  line-height:4rem;
   margin-bottom: 1rem;
+  transition: font-size 550ms ease-in-out;
 }
+
+.banner_text h1:hover {
+  font-size: 4.5rem;
+}
+
 
 .banner_text #first_p {
 
@@ -180,6 +190,7 @@ ul li:hover {
   color: white;
   padding: 1rem 3rem;
   border-radius: 0.7rem;
+  transition: background-color 250ms ease-in;
 }
 
 #button p:hover {
@@ -194,30 +205,44 @@ ul li:hover {
   display: flex;
   justify-content: center;
   z-index: 10;
-  background-image: url("../images/bg.png")
+  background-image: url("../images/bg.png");
 }
 
 .info .container{
   display: flex;
   margin: 5rem 0;
+  margin-bottom: 3rem;
 
 }
 
 .main_info {
   width: 60%;
+  background-color: white;
+  padding: 0.4rem 0.7rem;
+  box-shadow: 7px 7px 7px #888888;
 
-
-  /*margin-left: 24px;*/
 }
 
 .main_text h1 {
   margin-top: 2rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
+  font-size: 1.7rem;
+  font-weight: bold;
+  color: rgb(123, 188, 174);
+  text-shadow: 1.5px 1.5px rgb(120,177,173);
+  width: 95%;
+  margin-left: 0.4rem;
+}
+
+.main_text p {
+  width: 95%;
+  margin-left: 0.4rem;
 }
 
 .main_info .main_text p:last-child {
-  margin-top: 32px;
-  margin-bottom: 32px;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  font-style: italic;
 }
 
 .main_img img {
@@ -228,19 +253,37 @@ ul li:hover {
   display: flex;
   flex-direction: column;
   width: 40%;
-  border: 1px solid green;
   margin-left: 24px;
 }
 
 .side_container {
   display: flex;
+  align-items: center;
   width: 100%;
-  border: 1px solid red;
+  margin-bottom: 0.3rem;
+  transition: all 300ms ease-in;
+  /*border gradient*/
   background-color: white;
+  border-style: solid;
+  border-width: 0px 0px 0 5px;
+  -moz-border-image: url(../images/polygon.png) 0 0 0 27 stretch;
+  -webkit-border-image: url(../images/polygon.png) 0 0 0 27 stretch;
+  -o-border-image: url(../images/polygon.png) 0 0 0 27 stretch;
+  border-image: url(../images/polygon.png) 0 0 0 27 stretch;
 }
+
+.side_container:hover {
+  background-color: rgb(123, 188, 174);
+  color: white;
+}
+
 .side_img {
-  width: 35%;
-  margin: 18px;
+  width: 45%;
+  margin: 0.6rem;
+
+  display: flex;
+  align-items: center;
+
 }
 
 .side_img img{
@@ -248,13 +291,32 @@ ul li:hover {
 
 }
 
-
 .side_text {
-  border: 1px solid blue;
   width: 100%;
+  height: 6rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
+  margin-right: 1.2rem;
+
+}
+
+.side_text h2 {
+  color: rgb(255, 156, 114);
+  font-weight: bold;
+  transition: color 300ms ease-in;
+}
+
+.side_container:hover .side_text h2 {
+  color: white;
+}
+
+.side_text p:last-child {
+  display: none;
+}
+
+.side_text p{
+  font-size: 0.85rem;
 }
 
 
@@ -264,61 +326,73 @@ ul li:hover {
 .learn {
   display: flex;
   flex-direction: column;
-  border: 4px solid blue;
-
   justify-content: center;
   align-items: center;
   background-image: url("../images/pink-bg.jpg");
+
 }
 
 
-.learn .container {
-  border: 1px dotted red;
-}
 
 .learn h1 {
-  margin: 32px 0;
+  margin: 4rem 0;
   text-align: center;
+  color: rgb(44, 57, 59);
+  font-family: "Lily Script One", cursive;
+  font-size: 2.5rem;
 }
 
 #courses {
-  border: 3px solid yellow;
   margin: 0 72px;
+  margin-bottom: 4rem;
 }
+
 
 .top_three,
 .bottom_three {
   display: flex;
   width: 100%;
-  border: 3px solid purple;
   justify-content: space-around;
   margin-bottom: 32px;
+
 }
 
 .course_container {
   display: flex;
   flex-direction: column;
-  border: 1px solid black;
   width: 30%;
   background-color: white;
+  transition: scale 4s ease-in-out 100ms;
+}
+
+.course_container:hover {
+  transform: scale(1.1);
+
 }
 
 .course_container img {
   width: 100%;
-  border: 1px solid red;
+
 }
 
 .course_text {
   height: 100%;
-  margin: 16px 0 24px 16px;
+  margin: 1rem;
+  margin-bottom: 2rem;
+
 }
 
+
+
 .course_text h2 {
-  margin: 16px 0 8px 0;
+  margin: 0.2rem 0 0.5rem 0;
+  font-family: 'trump_town_proregular', sans-serif;
+  font-size: 1.3rem;
 }
 
 .course_text p:last-child {
-  margin-top: 8px;
+  margin-top: 0.3rem;
+  color: grey;
 }
 
 
@@ -327,7 +401,6 @@ ul li:hover {
                                    exhibit
 **************************************************************************/
 .exhibit {
-  border: 1px solid red;
   display:flex;
   flex-direction: column;
   justify-content: center;
@@ -336,16 +409,19 @@ ul li:hover {
 
 .exhibit h1 {
   text-align: center;
-  margin: 32px 0;
+  margin: 4rem 0;
+  color: rgb(44, 57, 59);
+  font-family: "Lily Script One", cursive;
+  font-size: 2.5rem;
+
 }
 
 .exhibit .container {
   display: flex;
-
+  margin-bottom: 5rem;
 }
 
 .main_ex {
-  border: 1px solid blue;
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -358,13 +434,17 @@ ul li:hover {
 }
 
 .video_text {
-  width: 90%;
+  width: 95%;
   margin-top: 24px;
   margin-bottom: 32px;
 }
 
 .video_text h2 {
-  margin-bottom: 8px;
+  margin-bottom: 1rem;
+  font-size: 1.7rem;
+  font-weight: bold;
+  color: rgb(123, 188, 174);
+  text-shadow: 1.5px 1.5px rgb(120,177,173);
 }
 
 
@@ -372,7 +452,7 @@ ul li:hover {
                                     footer
 **************************************************************************/
 footer {
-  margin-top: 5rem;
+
   height: 6rem;
   background-image: url("../images/polygon.png");
   display: flex;
@@ -394,11 +474,11 @@ footer {
 .term span{
   padding-left: 1rem;
   text-decoration: underline;
+  transition: color 250ms ease;
 }
 
 .term span:hover {
-  color:
-  rgb(44, 57, 59)
+  color:rgb(44, 57, 59)
 }
 
 
